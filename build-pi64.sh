@@ -8,7 +8,7 @@ cat "./config/default" >> ./src/config
 cat "./config/raspberry/default" >> ./src/config
 cat "./config/raspberry/rpi64" >> ./src/config
 source ./src/config
-IMGCOUNT=$(ls ./src/image/*raspios-bullseye-arm64*.img.xz | wc -l)
+IMGCOUNT=$(ls ./src/image/*raspios-bookworm-arm64*.img.xz | wc -l)
 if [ $IMGCOUNT -eq 0 ]; then
 	echo "Downloading image..."
 	find ./src/image -type f -not -name '.gitkeep' -delete
